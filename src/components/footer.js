@@ -16,7 +16,7 @@ export default function Footer()
     {
         return (
           <footer color="special-color-dark"> 
-           <div fluid className="text-center text-md-left">
+           <div fluid="true" className="text-center text-md-left">
               <div style={{width:'100%'}}>
               
               <div style={{width:'35%',float:'left'}}  md="6">

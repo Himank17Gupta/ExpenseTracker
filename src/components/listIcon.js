@@ -10,13 +10,13 @@ return(
 }
 
 const mapStateToProps = (state)=>{
-    console.log("Rec Central State Object ",state);
+ //afterDeployement   console.log("Rec Central State Object ",state);
     var array=[];
     state.forEach(obj => array.push(obj.eid));
-    console.log('array of eids :',array);
+ //afterDeployement   console.log('array of eids :',array);
     var array2=[];
     array2 =Array.from(new Set(array));
-    console.log('array of eids after set is :',array2);
+ //afterDeployement   console.log('array of eids after set is :',array2);
     var setarrlen=array2.length;
     return {
         count:setarrlen                   //changed from count:state.length

@@ -55,7 +55,7 @@ const textarea ={
       
   function EditExpense(props){
   
-  console.log(props.editobject);
+ //afterDeployement console.log(props.editobject);
   return(
   <div style={divStyle}>
   {/*<h3>update your shit here..</h3>*/}

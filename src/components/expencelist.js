@@ -27,7 +27,7 @@ const buttonStyle = {
 
 const ExpenseList=(props)=>
 {
-    console.log('expenselist received state obj as :',props.arrayofobj);
+  //afterDeployement  console.log('expenselist received state obj as :',props.arrayofobj);
 return(
     <div style={divStyle}>
     <h2 style={{color:'#fff'}}>Expense Records:</h2>
@@ -35,7 +35,7 @@ return(
      props.arrayofobj.map((obj)=>{
      return(
      <li key={obj.eid}     
-     style={obj.paid?{backgroundColor:'#0e9e1f',boxSizing: 'border-round',borderRadius: '15px',width:'-webkit-fill-available',}:{backgroundColor:'#d1084b',boxSizing: 'border-round',borderRadius: '15px',width:'-webkit-fill-available',}}
+     style={obj.paid?{backgroundColor:'#0e9e1f',boxSizing: 'border-round',borderRadius: '15px',width:'-webkit-fill-available',marginBottom: '2px'}:{backgroundColor:'#d1084b',boxSizing: 'border-round',borderRadius: '15px',width:'-webkit-fill-available',marginBottom: '2px'}}
      >
          <h3 style={{textAlign:'center',color: 'black', margin:'0px',padding:'0px'}}>{obj.expence}</h3>
          <h4 style={{textAlign:'center',color: 'black', margin:'0px',padding:'0px'}}>{obj.desc} </h4><h4 style={{textAlign:'center',color: 'black', margin:'0px',padding:'0px'}}> ₹{obj.amt} </h4> {/*<span>   paid :{""+obj.paid} </span>*/}
@@ -51,23 +51,23 @@ return(
 )
 }
 const mapStateToProps = (state)=>{
-    console.log("Rec Central State Object in expense list",state);
+  //afterDeployement  console.log("Rec Central State Object in expense list",state);
     
     var array=[];
     state.forEach(obj => array.push(obj.eid));
-    console.log('array of eids :',array);
+   //afterDeployement console.log('array of eids :',array);
     //array=state.filter(obj=>obj);
     var array2=[];
     array2 =Array.from(new Set(array));
-    console.log('array of eids after set is :',array2);
+  //afterDeployement  console.log('array of eids after set is :',array2);
     var setarrlen=array2.length;
     var lenstate=state.length;
     var array3=[];
     array3=state.filter(obj=>obj);
     array3.splice(0,lenstate-setarrlen);
-    console.log('plz work bitch -._.-:',array3);
+  //afterDeployement  console.log('plz work bitch -._.-:',array3);
     state=array3;
-    console.log("exporting Central State Object in expense list",state);
+   //afterDeployement console.log("exporting Central State Object in expense list",state);
     return {
         arrayofobj:array3      // changed from:   arrayofobj:state
     };

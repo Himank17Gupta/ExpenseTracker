@@ -25,30 +25,31 @@ constructor(props){
 }
 
 componentDidMount(){
-    console.log('component did mount bitches');
+  //afterDeployement  console.log('component did mount bitches');
+  console.log("Hi, looks like you know what you are doing...I think we can have a nice talk ;) \n https://www.linkedin.com/in/himank-gupta-b37873192/ ")
     var expfromfb=[];                
     expfromfb= firebase.database().ref('/expenses');
     expfromfb.on('value',async(snapshot)=>{
         var expns=[];
         expns=snapshot.val();
-await console.log('component did mount before azax',expns);
+//afterDeployement await console.log('component did mount before azax',expns);
 var exparr=[];
 for(let key in expns){                 //gadbad
     let expnsobj=expns[key];
     await exparr.push(expnsobj);
 } 
-console.log('exparr sent to doazax is: ',exparr);
+//afterDeployement console.log('exparr sent to doazax is: ',exparr);
 
 //await
  this.doazax(exparr);
 exparr=[];      
-console.log('component did mount after loop');
+//afterDeployement console.log('component did mount after loop');
 // expns.forEach(expobj => {
 //     var action= expenseActionCreator(expobj.expence,expobj.desc,expobj.amt,expobj.paid,'add');
 //     store.dispatch(action);
 // });
 });
-console.log('component did mount end');
+//afterDeployement console.log('component did mount end');
 
 }
 // products.on('value',(snapshot)=>{
@@ -59,7 +60,7 @@ console.log('component did mount end');
 //   }
 
  async doazax(expenses){
-    console.log('doajax called',expenses);
+//afterDeployement    console.log('doajax called',expenses);
    await expenses.forEach(async(expobj )=>{
         //var action= expenseActionCreator(expobj.expence,expobj.desc,expobj.amt,expobj.paid,'add');
        var action=this.loadfromfbactioncreator(expobj.eid,expobj.expence,expobj.desc,expobj.amt,expobj.paid,'load')
@@ -68,7 +69,7 @@ console.log('component did mount end');
 
 }
 loadfromfbactioncreator(eid,expence,desc,amt,paid,type){
-console.log('inside load from fb action creator');
+//afterDeployement console.log('inside load from fb action creator');
 return {
     payload:{eid,expence,desc,amt,paid},
     type:type
@@ -85,9 +86,9 @@ this.exp[key]=val;
 //console.log('exp object formed is: ', this.exp);    // --working so      
 }
 handlePaid(event){
-    console.log('paid called',event.target.checked);
+ //afterDeployement   console.log('paid called',event.target.checked);
     this.exp['paid']=event.target.checked;
-    console.log('exp object formed is: ', this.exp); 
+ //afterDeployement   console.log('exp object formed is: ', this.exp); 
 }
 
 takeUpdateInput(event){
@@ -95,11 +96,11 @@ takeUpdateInput(event){
     var key=event.target.id;
     this.editobject[key]=val;
     //this.editobject['paid']=event.target.checked;
-    console.log('exp object formed is: ', this.editobject);
+ //afterDeployement   console.log('exp object formed is: ', this.editobject);
 }
 
 add(){
-    console.log('add called');
+ //afterDeployement   console.log('add called');
     if(this.exp.expense&&this.exp.desc&&this.exp.amt){
     var action= expenseActionCreator(this.exp.expense,this.exp.desc,this.exp.amt,this.exp.paid,'add');
     store.dispatch(action);
@@ -113,20 +114,20 @@ add(){
 
 updateExpensePaid(event){
 var eid=event.target.id;
-console.log('update expense paid called by eid: ',eid); //recieved the eid of updating expense object
+//afterDeployement console.log('update expense paid called by eid: ',eid); //recieved the eid of updating expense object
 var action={eid:eid,type:'update'};  
 store.dispatch(action);  
 }
 
 removeExpense(event){
 var eid=event.target.id;
-console.log('remove expense called by eid: ',eid);
+//afterDeployement console.log('remove expense called by eid: ',eid);
 var action={eid:eid,type:'remove'};
 store.dispatch(action);
 }
 
 testfn(eid,exp,des,amt,paid){
-    console.log('test fn from updatetest called...expense is :',eid,exp,des,amt,paid);
+  //afterDeployement  console.log('test fn from updatetest called...expense is :',eid,exp,des,amt,paid);
     this.editobject['eid']=eid;
     this.editobject['expense']=exp;
     this.editobject['desc']=des;
@@ -137,15 +138,15 @@ testfn(eid,exp,des,amt,paid){
 }
 
 updatereal(){
-    console.log('real update called');
+   //afterDeployement console.log('real update called');
     //eid: 1, expense: "education", desc: "qwerty", amt: "123", paid: "on"
     var action= {eid:this.editobject.eid, expense:this.editobject.expense, desc:this.editobject.desc, amt:this.editobject.amt, paid:this.editobject.paid,type:'updatereal'};
     store.dispatch(action);
 }
 savetofb(arr){
-    console.log('state is',this.state);
-    console.log('received central store is',arr);
-    console.log('save to fb called');
+ //afterDeployement   console.log('state is',this.state);
+ //afterDeployement   console.log('received central store is',arr);
+ //afterDeployement   console.log('save to fb called');
     var action={'payload':arr,type:'savetofb'};
     store.dispatch(action);
 }
@@ -164,7 +165,7 @@ buttonStyle = {
   };
 
 viewlist(){
-console.log('changing screen called');
+//afterDeployement console.log('changing screen called');
 if(this.screen=='addexpense'){
 this.screen='viewlist';
 this.setState({screen:this.screen})

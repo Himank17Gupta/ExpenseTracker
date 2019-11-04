@@ -21,10 +21,10 @@ function ID(){
 };
 
 function expenseActionCreator(expence,desc,amt,paid,type){
-    console.log('localstorage:',localStorage.expenseId);
+ //afterDeployement   console.log('localstorage:',localStorage.expenseId);
 //var eid=localStorage.expenseId++;
 var eid=ID();
-console.log('localstorage:',localStorage.expenseId);
+//afterDeployement console.log('localstorage:',localStorage.expenseId);
     return {
         payload:{expence,desc,amt,paid,eid},
         type:type
