@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/ExpenseTracker/static/css/main.2cce8147.chunk.css",
-    "main.js": "/ExpenseTracker/static/js/main.2fae1246.chunk.js",
-    "main.js.map": "/ExpenseTracker/static/js/main.2fae1246.chunk.js.map",
+    "main.js": "/ExpenseTracker/static/js/main.07babf54.chunk.js",
+    "main.js.map": "/ExpenseTracker/static/js/main.07babf54.chunk.js.map",
     "runtime~main.js": "/ExpenseTracker/static/js/runtime~main.99e47884.js",
     "runtime~main.js.map": "/ExpenseTracker/static/js/runtime~main.99e47884.js.map",
     "static/js/2.bc334617.chunk.js": "/ExpenseTracker/static/js/2.bc334617.chunk.js",
     "static/js/2.bc334617.chunk.js.map": "/ExpenseTracker/static/js/2.bc334617.chunk.js.map",
     "index.html": "/ExpenseTracker/index.html",
-    "precache-manifest.d7a077aa215c6492a7e44a4985a118cd.js": "/ExpenseTracker/precache-manifest.d7a077aa215c6492a7e44a4985a118cd.js",
+    "precache-manifest.f9488a1a2a37bf94248a676e85df7279.js": "/ExpenseTracker/precache-manifest.f9488a1a2a37bf94248a676e85df7279.js",
     "service-worker.js": "/ExpenseTracker/service-worker.js",
     "static/css/main.2cce8147.chunk.css.map": "/ExpenseTracker/static/css/main.2cce8147.chunk.css.map"
   }
